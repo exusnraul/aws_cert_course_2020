@@ -184,8 +184,196 @@ Legacy IT
 
 Section 3: AWS Cloud Overview
 
-AWS History
-===========
+AWS Cloud History
+=================
+- internal launch 2002
+- vision 2003
+- public launch 2004
+- re-launch S3, SQS {Simple Queue Service}, EC2 2006
+- amazon.com retail sites migrated 2010
+- $1.57 B 2015
+- $25 B 2018
+
+- 165 services, eg computing. machine learning, storage, analytics, etc
+- 22 geographical regions
+
+
+AWS Global Infrastructure
+=========================
+- region
+  - 22 regions around the world
+  - different geographical areas
+  - w/2 or more AZs, 
+  - each AZ isolated from other AWS regions
+- availability zones {AZ}
+  - actual locations into which you launch your resources, eg an EC2 AMI instance
+  - 1 or more data centers that are physically separate from other AZs
+  - AZs span 1 or more data centers and have direct, low-latency, high throughput & redundant network connections between each other
+  - each AZ is designed as an independent failure zone
+    - app deployed in multiple AZs, if 1 fails, the other is just fine
+  - physically separated w/in a region but not in same building, use discrete power sources
+- edge locations
+  - location w/a cache of content that can be delivered at low latency to users
+  - used by CloudFront
+- regional edge cache
+  - part of CloudFront
+  - larger caches that sit between AWS services & Edge locations
+- global network
+  - highly available, low latency private global network
+  - interconnecting every data center, AZ & AWS region
+
+
+AWS Services in Scope for Exam
+==============================
+- Identity & Access Management {IAM}
+  - users, groups, policies
+- AWS Compute
+- check out the slides & the course summary
+
+
+AWS Global vs Regional Services
+===============================
+- check the PDF for the ones that pertain to the exam
+- global
+  - AWS IAM
+  - Amazon S3 {storage}
+  - AWS Direct Connect {networking}
+  - Content Delivery & DNS
+    - Amazon Toute 53
+    - Amazon CloudFront
+  - Cloud Governance & Security
+    - AWS WAF & Shield
+    - AWS Artifact
+    - AWS Trusted Advisor
+    - AWS Personal Health Dashboard
+- regional
+  - the rest
+
+
+- IAM - user accounts
+  - just one
+  - global account
+    - different permissions
+
+
+- EC2 web server , Amazon RDS DB
+  - regional
+  - stood up in 1 region / AZ
+  - S3 Buckets
+    - regional
+    - stood up in another region/AZ
+    - copy data from above to here
+
+
+AWS Billing & Pricing Overview
+==============================
+- 3 fundamentals
+  - compute
+    - pay for compute / running time, eg EC2
+  - storage
+    - pay for amount of data stored
+    - eg S3, EBS, EFS
+  - Data Outbound
+    - charged outbound data transfer rate
+    - aggregated across the services, combined amount is charged
+
+- on-demand
+  - user for compute & database capacity
+  - no long-term commitments
+  - beauty of the cloud
+    - not tied to IPs
+
+- dedicated instances {more expensive}
+  - available for Amazon EC2
+  - hardware dedicated to a single customer
+
+- spot instances
+  - purchase spare capacity w/no commitments
+  - great discounts
+  - but subject to disappearing at any time
+
+- reservations
+  - up to 75% discount in exchange for a term commitment
+    - 1 or 3 year term
+  - options to pay
+    - no upfront
+    - partial upfront 
+    - all upfront
+  - available for
+    - EC2 Reserved instances
+    - DynamoDB Reserved capacity
+    - ElastiCache Reserved nodes
+    - RDS Reserved instances
+    - RedShift Reserved nodes {data warehouse}
+
+
+AWS Acceptable Use Policy
+=========================
+- check the white paper
+- describes prohibited uses of AWS
+- common sense
+- AWS monitors
+
+
+AWS Exam Cram
+=============
+- check the downloaded pdf
+
 
 ==========================================================================================
 ==========================================================================================
+
+Section 4: Identity & Access Management {IAM Roles}
+
+IAM Overview
+============
+
+
+IAM Users
+=========
+
+
+IAM Groups
+==========
+
+
+IAM Roles
+=========
+
+
+IAM Policies
+============
+
+
+IAM Authentication Methods
+==========================
+
+
+IAM Multi-Factor Authentication
+===============================
+
+
+IAM Security Token Service {STS}
+================================
+
+
+IAM Best Practices
+==================
+
+
+Exam Cram
+=========
+
+
+==========================================================================================
+==========================================================================================
+
+Section 5: Create AWS Free Tier Account (optional)
+
+???
+=================
+
+
+==========================================================================================
+==========================================================================================
+
