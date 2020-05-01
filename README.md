@@ -414,17 +414,45 @@ Section 5: Create AWS Free Tier Account (optional)
 
 Hands-on AWS online site
 ========================
-- 
+- new user : rjzawis
+- access key id : AKIA3C3XAA3YT3DAHAOH 
+- secret access key : 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
 
 ==========================================================================================
 ==========================================================================================
 
+Section 6: AWS Compute
 
-Section 6: Traditional Servers
+- EC2 - web service part of AWS Compute suite of products
+- by default, 20 instances per region max
+  - if need more, have to apply to AWS & ask - more $$$
+- EC2 is a REGIONAL service -must select the region to launch the instance
 
-???
-========================
-- 
+- created an EC2 instance
+- created an EC2 instance w/httpd & default :80/index.html installed
+
+- ECS - FARGATE - run Docker containers quickly
+  - handles cluster mgmt for you
+  - created NGINX cluster
+
+- LAMBDA
+  - serverless
+  - run code w/o provisioning or managing servers
+  - "trigger" executed - eg, web page visited
+  - don't pay until the code runs
+
+- LIGHTSAIL
+  - easily provision compute services
+  - easily created a WordPress app
+
+
+==========================================================================================
+==========================================================================================
+
+Section 7: AWS Storage
+
+- Object, Block, and File Storage
+
 
 ==========================================================================================
 ==========================================================================================
