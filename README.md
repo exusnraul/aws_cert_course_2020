@@ -1,6 +1,7 @@
 
 Udemy  AWS Certified Cloud Practitioner Ultimate Exam Training Course 2020
 
+
 Course : https://capitalsolutionsgroup.udemy.com/course/aws-certified-cloud-practitioner-training-course/learn/lecture/18549168#overview
          - Neal Davis, UK, AUStralia
 Google : search for "AWS certified cloud practitioner guide" 
@@ -27,6 +28,10 @@ White papers - get at
   - Architecting for the Cloud : AWS Best Practices
   - How AWS Pricing Works
   - Cost Management in the AWS Cloud
+
+
+Start with Section 4. IAM Users -> START HERE FOR ADDITIONAL NOTES TO THE SLIDES - OTHERWISE JUST READ SLIDES
+
 
 ==========================================================================================
 
@@ -318,6 +323,7 @@ AWS Acceptable Use Policy
 AWS Exam Cram
 =============
 - check the downloaded pdf
+- 100%, 6/6
 
 
 ==========================================================================================
@@ -341,47 +347,84 @@ Identity Federation
     - allowing it to access S3 and store data there;
 
 
-IAM Users
+IAM Users   ****** START HERE FOR ADDITIONAL NOTES TO THE SLIDES - OTHERWISE JUST REFER TO THEM
 =========
+- user accounts assigned to individuals or a service
+- eg, Ethan, Adrian
 
 
-IAM Groups, Policies, Roles
-==================================
+IAM Groups
+==========
+- eg, Developers, AWS Admins, Operations
+
+
+IAM Roles
+=========
+- created & then "assumed" by another entity
+- eg, create an EC2 instance - assign a 'role' that allows full access to S3 storage service
+- roles bypass need for an explicit userid/password
+- defined role permissions assumed by entities having that role
+
+
+IAM Policies
+============
+- eg, "full access" to S3, "read only" to DynamoDB
+
 
 
 IAM Authentication Methods
 ==========================
-- eg, MS Active Directory
-- authentication
-- API Keys
+- external, eg, MS Active Directory
+- API : need an access key id & secret access key, eg, command line, SDKs
+- UI AWS Mgmt Console : need an IAM User account w/password
+- some AWS Services : need a signing certificate
 
 
 IAM Multi-Factor Authentication
 ===============================
 - adding additional security
+- 3 factors
+  - 1. Something Only You Know, eg, password
+  - 2. Something Only You Have, eg, Google Authenticator app, device - ie RSA ID
+  - 3. Something Only You Are, eg, fingerprint
+- in AWS
+  - {You Know} IAM User password
+  - {You Have} virtual {apt generate a code} or physical {RSA device} MFA device
 
 
 IAM Security Token Service {STS}
 ================================
+- see slides
 
 
 IAM Best Practices
 ==================
+- see slides
 
 
 Exam Cram
 =========
-
+- 7/8
+- ROLES are used to delegate permissions - choices were users, groups, policies, roles
 
 ==========================================================================================
 ==========================================================================================
 
 Section 5: Create AWS Free Tier Account (optional)
 
+Hands-on AWS online site
+========================
+- 
+
+==========================================================================================
+==========================================================================================
+
+
+Section 6: Traditional Servers
+
 ???
-=================
-
+========================
+- 
 
 ==========================================================================================
 ==========================================================================================
-
