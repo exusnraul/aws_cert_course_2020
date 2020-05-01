@@ -327,30 +327,38 @@ Section 4: Identity & Access Management {IAM Roles}
 
 IAM Overview
 ============
+Creating users {U}, groups {G}, policies {P}, roles {R}
+Controls access.
+Identity Federation
+- integrate an external entity to check for access, eg MicroSoft Active Directory
+- {U} create individual accounts to grant access 
+- {U} can also assign to a service
+- {P} defines permissions; apply to a user, group or role
+- {G} collections of users w/policies attached to them, or,
+- {G,P} add a bunch of users to a group & then apply 1 policy for that group
+- {R} security identity, similar to a user account, that can be assumed by other entities
+  - eg, launch an EC2 server, assign a role to that server, role would have a policy attached to it,
+    - allowing it to access S3 and store data there;
 
 
 IAM Users
 =========
 
 
-IAM Groups
-==========
-
-
-IAM Roles
-=========
-
-
-IAM Policies
-============
+IAM Groups, Policies, Roles
+==================================
 
 
 IAM Authentication Methods
 ==========================
+- eg, MS Active Directory
+- authentication
+- API Keys
 
 
 IAM Multi-Factor Authentication
 ===============================
+- adding additional security
 
 
 IAM Security Token Service {STS}
