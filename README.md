@@ -453,6 +453,35 @@ Section 7: AWS Storage
 
 - Object, Block, and File Storage
 
+- Object - S3
+- Block - EBS
+- File - File
+
+S3
+==
+- object stored in buckets
+- REST API to connect - get, put, post, delete
+- referenced via URL
+
+EBS
+===
+- only 1 that can be used as a boot
+- appear as local disks
+- volumes mounted over a network
+- create partitions, etc
+- can attach multiple EBS volumes to a single EC2 BUT
+  - CANNOT attach the same EBS volume to multiple EC2 instances
+- MUST be in same AvlZone
+- 1 can be a boot partition, another data
+
+EFS
+===
+- connect using a 'protocol', eg NFS
+- mount file system to a mount point
+
+S3
+==
+- upload objects {files, pix, etc} into buckets
 
 ==========================================================================================
 ==========================================================================================
