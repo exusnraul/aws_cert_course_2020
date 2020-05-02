@@ -415,8 +415,8 @@ Section 5: Create AWS Free Tier Account (optional)
 Hands-on AWS online site
 ========================
 - new user : rjzawis
-- access key id : AKIA3C3XAA3YT3DAHAOH 
-- secret access key : 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
+- access key id :  create new ones
+- secret access key : 
 
 ==========================================================================================
 ==========================================================================================
