@@ -519,18 +519,19 @@ exam cram
 
 Section 10: AWS Elastic Load Balancing & Auto-Scaling
 
-- 
 
 exam cram
 =========
-
+8/8 - looked up 1
 
 ==========================================================================================
 ==========================================================================================
 
 Section 11: AWS Content Delivery & DNS Services
 
-- 
+- Route 53 - DNS across regions
+- CloudFront - ContentDelivery - CDN
+
 
 exam cram
 =========
