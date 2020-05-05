@@ -555,11 +555,22 @@ exam cram
 
 Section 13: AWS Automation & Platform Services
 
-- 
+- CloudFormation {infrastructure}
+  - template-driven
+  - deploy infrastructure using code
+  - services launched for you via JSON
+  - Change Sets, Stacks, Templates
+
+- ElasticBeanStalk  {applications}
+  - builds containers
+  - platform service
+  - leverages CloudFormation
+  - WAR / ZIP files w/code = environment built "for you"
 
 exam cram
 =========
-
+5/6 - missed What sac can be used to automatically create an Amazon VPC & then launch
+      an EC2 instance.... : Correct answer : CLoudWatch
 
 ==========================================================================================
 ==========================================================================================
