@@ -591,18 +591,75 @@ exam cram
 ==========================================================================================
 ==========================================================================================
 
-Section 15: AWS AWS Billing & Pricing
+Section 15: AWS Billing & Pricing
 
-- 
+- Need to know :
+  - what you get for free
+    - VPC
+    - Elastic Beanstalk {just the resources}
+    - CloudFormation  {just the resources}
+    - IAM
+    - Auto-Scaling
+    - Consolidated Billing
+    - data going into AWS {only outbound}
+  - what you get charged for
+    - compute
+      - amount of time your instance is running  {based on instance type}
+      - load balancing {Network, Balanced}
+      - detailed monitoring {CloudWatch}
+      - Elastic IP addresses {if allocated but not used}
+      - AWS Lambda
+      - ECS
+      - FarGate
+    - storage
+      - amount of data being stored
+      - S3
+        - class type
+        - quantity
+        - # of requests
+        - moving data between storage classes
+      - S3 Glacier
+      - EBS
+        - amount provisioned
+      - EFS
+        - storage classes, amount used
+    - network
+      - VPN connections
+      - PrivateLink
+      - NAT Gateways, instances
+      - AWS Direct Connect - # port hours
+    - Database
+      - RDS  {amount of time running}
+        - clock time, instance type
+    - outbound data transfer
+  - how are you charged
+    - models
+      - on-demand
+        - good for short term
+      - dedicated
+        - good for compliance, licensed software, ie software per workstation
+      - spot instances {purchasing spare capacity}
+        - up to 90% off on-demand
+        - terminated when AWS needs capacity back
+      - reservations  {all services will have 'reserved' in their name}
+        - good if you predictable usage, @75% savings over on-demand
+        - no upfront
+        - partial upfront
+        - all upfront
+      - savings plan
+  - special payment options
+
 
 exam cram
 =========
+10/14 - try 1
+14/14 - try 2
 
 
 ==========================================================================================
 ==========================================================================================
 
-Section 16: AWS AWS Cloud Security
+Section 16: AWS Cloud Security
 
 - 
 
