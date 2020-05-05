@@ -661,11 +661,15 @@ exam cram
 
 Section 16: AWS Cloud Security
 
-- 
+- Shared Responsibility Model
+  - what customer is responsible for
+    - Security "IN" the cloud
+  - what AWS is responsible for
+    - Security "OF" the cloud
 
 exam cram
 =========
-
+12/12
 
 ==========================================================================================
 ==========================================================================================
