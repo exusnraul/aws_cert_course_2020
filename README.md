@@ -535,14 +535,16 @@ Section 11: AWS Content Delivery & DNS Services
 
 exam cram
 =========
-
+7/8 - missed "Which service has built-in DDOS protection ? - said Route 53, correct answer : CloudFront
 
 ==========================================================================================
 ==========================================================================================
 
 Section 12: AWS Monitoring & Logging SErvices
 
-- 
+- CloudWatch
+- CloudTrail : auditing
+
 
 exam cram
 =========
