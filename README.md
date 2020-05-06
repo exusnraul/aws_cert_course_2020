@@ -745,7 +745,8 @@ Section 18: AWS Additional Services Seen on the Exam
 
 Section 19: AWS Full length practice exams
 
-- 
+- test # 1 : 80%
+- test # 2 : 86%
 
 
 ==========================================================================================
