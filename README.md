@@ -676,17 +676,74 @@ exam cram
 
 Section 17: AWS Architecting for the Cloud
 
-- 
+- Best Practices section
+- horizontal {increase #instances} over vertical scaling {manually increase instance stats, downtime}
+- resources are reusable
+- use automation
+- loose coupling - reduce interdependencies
+  - service discovery
+- use existing AWS services - not building new servers
+- use right db for workload
+- remove single points of failure
+  - introduce redundancy
+- detect failure {health checks, alarms, automate detection & reaction}
+- durable data storage
+- optimize for cost
+  - only build what you need
+- caching
+  - improve performance & cost efficiency	
+  - Application Data Caching {AWS ElastiCache, Dynamo DB DAX}
+- Security
+  - use AWS
+  - reduce privileged access
+  - CloudFormation {build secure environments - template}
+  - Auditing - {Trusted Advisor, Config, Inspector}
 
+- 5 Pillars of Operational Excellence
+  - Operational Excellence
+  - Security
+  - Reliability
+  - Performance Efficiency
+  - Cost Optimization
 
 exam cram
 =========
-
+12/12
 
 ==========================================================================================
 ==========================================================================================
 
-Section 18: AWS Full length practice exams
+Section 18: AWS Additional Services Seen on the Exam
+
+- AWS Rekognition - image analysis, objects, facial features, celebrities
+  - videos as well
+- AWS SNS - Simple Notification Service  {loose coupling} - a push service
+  - application integration services
+  - publish / subscribe
+  - sending notifications from publishers to subscribers
+    - eg, EC2, CloudWatch, S3 send a message into SNS topics - sends on to Simple Q Svc, emails, AWS Lambda
+    - pushes msgs to subscribers
+  - managed service, pay-as-you-go
+- AWS SQS Simple Queue Service - pull-based service
+  - message bus
+  - create queues, msgs get placed into
+    - eg, EC2s get info from customers, place info/orders into qs
+      - back-end EC2 apps process msgs in qs
+  - different types of qs
+  - back-end keeps polling qs
+- AWS SWF - Simple Workflow Service
+  - order service
+  - ideal for human-enabled workflows
+- AWS Step Functions
+  - replacing a lot of SWF use cases
+  - uses JSON code
+  - creates visual workflow - good for decision tree flows - yes/no, pass/fail - workflows
+  - state machines
+
+==========================================================================================
+==========================================================================================
+
+Section 19: AWS Full length practice exams
 
 - 
 
@@ -694,7 +751,7 @@ Section 18: AWS Full length practice exams
 ==========================================================================================
 ==========================================================================================
 
-Section 19: Putting It Together
+Section 20: Putting It Together
 
 - 
 
