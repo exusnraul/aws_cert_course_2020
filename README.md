@@ -764,6 +764,9 @@ Section 21: Final Exam Preparation + BONUS
 
 
 ===============================================================
+===============================================================
+===============================================================
+
 
 CarahSoft - AWS Webinar - Cloud Practitioner Boot Camp
 05/07/2020 - 12p-4p
@@ -925,6 +928,7 @@ AWS Compute Services
       - good for no time commitment serverless applications, big data calls
       - auction / bid to obtain - can go away at any time {2 minute notice}
 
+
 Data Storage Options
 --------------------
 - Instance Store
@@ -934,6 +938,7 @@ Data Storage Options
 - EBS
   - persistent
   - data is independent of instance lifecycle
+
 
 AMIs
 ----
@@ -956,4 +961,161 @@ AWS Lambda
 - serverless Compute service  {DynamoDB - RDS}
 - runs code in response to events 
   - automatically manages underlying resources
+
+
+{1255p-105p : 10 minute break}
+
+
+AWS Storage Services
+--------------------
+- S3 - Simple Storage Service
+- can run AWS Analytic Services against S3
+  - Athena, Redshift, EMR
+- S3 Lake
+  - stand up a Data Lake
+- up to 10 object tags
+  - use tags to perform operations
+- can assign access policies against data
+- ACLs - access control list
+- 6 Classes - cost-based
+- Glacier & Glacier Deep Archive
+  - longer term storage
+- can analyze data and move data between classes
+- manage data at all levels at-scale
+- cfg fine-tune access to data
+- cost effectively store data across classes
+- audit & report on data
+  - develop rules against analysis
+- 11 9s of durability
+- scale data on-demand & in minutes
+- ingest & store as much data as needed, eg good for Big Data
+
+Classes
+-------
+- Standard
+  - multi AZ
+  - used for frequent access
+- Intelligent-Tiering
+  - uses deep learning to analyze
+  - data w/changing access patterns
+  - optimize storage costs
+  - no management required  {cost optimized automatically}
+  - no retrieval fees
+  - supports all of the capabilities of the rest of the S3 storage classes
+- Standard 1A - '1A' - Infrequent Access
+- One Zone 1A {only 1 AZ}
+  - infrequent access
+  - multi AZ
+  - easily recreatable data
+  - mobile / enterprise backup data
+- Glacier
+- Glacier Deep Archive
+  - cold storage
+  - accessed infrequently
+  - fee for retrieving
+  - good for media archives, medical data
+  - recover in 12 hours or less
+  - fully managed
+
+
+EBS - Elastic Block Storage
+---------------------------
+- durable high-performance
+- simple to use
+  - low latency, high throughput
+- performant
+  - elastic volumes
+    - adjust size & tune performance w/NO disruption
+- reliable
+  - scaled across multi AZ
+- snapshots 
+  - incremental
+  - users control encryption
+- each EC2 has 1 EBS Boot Volume
+
+
+EFS - Elastic File System
+-------------------------
+- NFS file System
+- SIMple
+  - fully managed
+  - can mount multiple
+  - secure
+- elastic
+  - grows automatically
+  - stores data redundantly by default
+- scalable
+
+
+Data Transfer
+-------------
+- Direct Connect
+  - private connection between on-premises & AWS
+  - establish a quick on-premises to AWS connection
+  - 1 GB, 10 GB
+- SnowBall, Snowmobile
+  - send data in bulk, ie Tera, Peta, Exa
+  - data encrypted
+  - hardware devices sent to you
+- Storage Gateway
+  - hybrid cloud data storage solution
+  - simplify storage mgmt
+  - 3 Types
+    - simple 
+    - Tape / File / ????
+  - connects to other S3 storage services
+- Transfer Acceleration
+- Kinesis
+- many others
+
+
+IAM : Security & Access Control
+===============================
+-------------------------------
+- IAM - identity & Access Management
+- users, groups
+  - Permissions assigned to Policies
+  - Policies assign to Roles
+  - Roles given to users, groups
+- USERS
+  - entity that interact w/AWS
+  - person or service
+  - access thru AWS Console {userid, password} / or CLI {Access Key & ID}
+- eg, new employee
+- use root user as little as possible
+- best practice
+  - use root user to create an IAM user w/Admin access
+
+Users & Permissions
+-------------------
+- no permissions by default when created
+- have to attach permissions
+  - ie, who has access
+  - what actions
+
+Policies
+--------
+- Managed
+  - attached to multiple users, groups and roles
+- Inline
+  - ??
+
+Groups
+------
+- reduces individual user management
+- assign policy to a Group - then add users into groups
+
+Roles
+-----
+- an identity w/permission policies that determine what the identity can / cannot do
+- can be assumed by anyone
+- give cross-account access
+- access within an account
+- NO credentials
+- Federation : give access to identities defined outside AWS
+
+
+{Lab & break : 145p-230p}
+Lab log in : https://975060361121.signin.aws.amazon.com/console
+
 
