@@ -760,3 +760,200 @@ Section 21: Final Exam Preparation + BONUS
 
 - downloaded additional exams and cheat sheet
 - checked everything into Git
+
+
+
+===============================================================
+
+CarahSoft - AWS Webinar - Cloud Practitioner Boot Camp
+05/07/2020 - 12p-4p
+
+- trade capital expense for variable/operational expense
+- benefit from massive economies of scale
+- stop guessing capacity
+- increase speed & agility
+- stop spending $$ running & maintaining data centers
+- go global in minutes
+
+AWS Global Infrastructure
+-------------------------
+- 24 Regions
+- 76 Availability Zones
+- 205+ Edge Locations
+
+- US East 1 - 1st region made generally available
+  - 50 mile radius around there - AZ
+
+- infrastructure.aws - website showing global AWS infrastructure
+
+
+Regions & AZs
+-------------
+- Regions - separate independent areas
+- AZs connected by high-speed low-latency links
+
+AZs
+---
+- multiple isolated locations within a region
+- 1 AZ @= 1 data center
+- independent failure zones
+- physically separated
+- on separate Low Risk Flood Plains
+
+4 Popular Use cases
+-------------------
+- Dev & Test
+  - eg, Elastic BeanStalk {no charge for service - service for the resources}
+    - easily create copies of their environments
+    - upload code - BeanStalk does resource allocation
+  - resources only needed when used
+
+- Storage
+  - low cost data storage
+  - object, block & file storage
+  - S3 {11 9's security, Glacier {low-cost archival}
+
+- Disaster Recovery
+  - enables faster disaster recovery of they critical IT systems w/o
+    incurring infrastructure expense for a 2nd site
+  - Fast Performance
+  - No Tapes
+  - Compliance
+  - Elasticity
+    - add any amount of data quickly adapting to increase / decrease resources
+  - Secure
+    - Auditing, Certifications, etc
+  - Partners
+    - Solution Provider & Integration Assistance
+
+- Big Data
+  - Storage & Databases
+    - Object Storage
+    - NoSQL
+    - Graph databases
+    - HBase
+    - Aurora
+  - Analytic Frameworks
+    - Hadoop & Spark
+    - ElasticSearch
+  - Data Warehousing
+    - RedShift
+  - Business Intelligence
+  - Real-Time Analytics
+  - Machine Learning
+
+- AWS Storage Gateway - connect on-premises db to cloud-based AWS services
+
+
+Shared Responsibility Model
+---------------------------
+- who is responsible for what
+- Security & Compliance -> shared responsibility
+- AWS - security "OF" the cloud
+  - hardware, data centers, networking equipment & software
+- Customer - security "IN" the cloud 
+  - all application security
+  - data encryption
+  - OS security patches, IAM, network & firewall configurations
+
+
+AWS Well-Architected Framework
+------------------------------
+- Pillars
+- Design Principles
+- Questions
+
+5 Pillars
+---------
+- Operations Excellence
+- Security
+  - implement a strong identity foundation
+  - enable traceability
+  - apply security at all layers
+  - automate best practices
+  - encrypt data in transit & at rest
+- Reliability
+  - test recovery procedures
+  - automatically recover
+  - scale horizontally to increase aggregate system availability
+  - stop guessing capacity
+  - manage change using automation
+- Performance
+  - use advanced technologies
+  - go global in minutes
+  - use server less architectures
+    - DynamoDB
+    - Lambda
+  - experiment more often
+  - mechanical sympathy
+- Cost Optimization
+  - adopt a consumption model
+  - measure overall efficiency
+  - stop spending money on datacenter operations
+  - analyze and attribute expenditure
+  - use managed services to reduce cost of ownership
+
+
+AWS Compute Services
+--------------------
+- EC2
+  - Elastic Compute Cloud
+  - resizable compute capacity
+  - instance types
+    - combines CPU, memory, storage & networking capacity
+    - c4.large
+      - 'c' : Instance Families, 'c' -> compute
+      - '4' : Instance Generations
+      - 'large' : Instance sizes
+
+  - integrated with
+    - EBS
+    - CloudWatch
+    - VPC
+    - IAM
+    - Batch
+    - ECS - container service
+
+  - Instance Types
+    - On-Demand
+      - pay only when used
+    - Reserved
+      - discounted price, up to 75% - NEED to make a time commitment, eg 1 - 3 years
+    - Spot
+      - discounted - uses "spare"/unused compute capacity
+      - up to 90% 
+      - good for no time commitment serverless applications, big data calls
+      - auction / bid to obtain - can go away at any time {2 minute notice}
+
+Data Storage Options
+--------------------
+- Instance Store
+  - temporary - once instance stops - data goes away
+  - physically attached to host
+  - good for cache, scratch data
+- EBS
+  - persistent
+  - data is independent of instance lifecycle
+
+AMIs
+----
+- Composed of AMI - Machine Images
+  - Amazon maintained
+  - Community Built
+  - Personally built ones  {can be public or private}
+
+
+Auto-Scaling
+------------
+- Maintains EC2 Instance availability
+  - detects bad ones
+  - replaces w/good
+- Automatically Scale Up / Down
+  - based on cfg'd settings / rules
+
+AWS Lambda
+----------
+- serverless Compute service  {DynamoDB - RDS}
+- runs code in response to events 
+  - automatically manages underlying resources
+
