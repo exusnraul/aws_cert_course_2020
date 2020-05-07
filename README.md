@@ -1098,7 +1098,7 @@ Policies
 - Managed
   - attached to multiple users, groups and roles
 - Inline
-  - ??
+  - usually just for one-off causes
 
 Groups
 ------
@@ -1117,5 +1117,258 @@ Roles
 
 {Lab & break : 145p-230p}
 Lab log in : https://975060361121.signin.aws.amazon.com/console
+Introduction to AWS Identity and Access Management
+
+
+
+VPC
+---
+- default one every region
+- can span Availability Zones
+- own logically isolated area w/in a region
+- ENI - elastic network interface
+  - represents a virtual network card
+- Subnet  {firewall for your EC2}
+  - public
+  - private
+    - no route to an Internet gateway
+- Internet Gateway
+  - attached to VPC - allows access out to Internet
+  - provides a target in your VPC route tables for internet
+  - perform network access translation {NAT}
+- NACL
+  - firewall
+- Route Table
+  - directs where traffic from your VPC goes
+
+
+VPC Peering
+-----------
+- networking connection between 2 VPCs
+- enables you to route traffic between them using private IP addresses
+- appear to be communicating as if in the same network 
+- allows inter-region connections
+- helps facilitate the transfer of data
+  - eg, create a file-sharing network
+
+
+
+AWS Database Services
+---------------------
+- relational
+  - Aurora, RDS
+- key-value
+  - DynamoDB
+- In-memory
+  - ElastiCache
+- Document
+  - DocumentDB
+
+Aurora {RDS}
+------------
+- MySQL, PostgreSQL compatible relational
+- performance & scalable
+- availability & durable
+- highly secure
+- fully managed by RDS
+- 5 times faster MySQL / 3 times faster PostgreSQL
+- read-replicas
+- cost effectiveness - 1/10 the cost
+
+
+RDS
+---
+- Aurora, MySQL, PostgreSQL, MariaDB, SQL Server, Oracle
+- managed relational
+- easy to administer
+- highly scalable
+- fast & secure
+- available & durable
+  - automatic multi-AZ
+- DMS
+  - Database Migration Service
+    - migrates on-premises source dbs to AWS
+  - source db remains fully operational
+
+DynamoDB
+--------
+- NoSQL db service
+- performance
+- fully managed
+  - scales up & down automatically
+- serverless
+  - good for modern apps
+- comprehensive security
+- global database for global users and apps
+- encrypts all data by default
+- integrates w/ IAM
+- easily replicates tables across multiple AWS Regions
+
+
+DocumentDB
+----------
+- mongodb-compatible
+- fully managed, scalable
+- performance at scale
+- durable
+  - 6 copies of data across 3 AZs
+- highly available
+- can be used w/AWS DMS
+
+
+RedShift  {large data sets, analysis}
+--------
+- data warehouse service
+- fast
+  - paralel processing
+- highly scalable
+- virtually unlimited concurrency
+  - dynamically scales based on data volumes
+- extends your data lake
+- 10x performance
+- 1/10th cost
+- uses machine learning to analyze data - peta, exabytes
+- use KMS & HSM for security
+
+
+
+
+Monitoring & Auditing
+---------------------
+- CloudWatch  {resource monitoring}
+  - monitoring service
+  - monitors cloud resources, applications
+  - collects & tracks metrics
+  - collect & monitor log files
+  - set alarms
+    - based upon analysis
+    - high resolution
+    - help w/cost
+  - Logs
+    - collect & store
+    - Bended  {AWS logs}
+    - AWS Service Logs
+    - Custom {apps, on-premises}
+      - install agent to collect on-premises logs
+  - built-in Dashboards to display metrics
+  - graph metrics & data for analysis
+  - eg, CPU utilization, memory
+
+- CloudTrail  {AUDITing user account actions, activity, console,}
+  - enabled by default
+  - compliance auditing 
+  - operational troubleshooting
+  - security analysis
+  - automatic compliance remediation
+  - actions taken by users, roles or AWS service are recorded
+  - last 90 days kept around
+  - Event History
+  - Management Events - management operations
+  - Data Events - resource operations performed
+
+
+
+AWS CloudFormation  {SaaS}
+==================
+- InfraStructure As Code
+- Templated resource provisioning
+- create templates to describe the AWS Resources used to run your application
+- no charge for service
+  - charged for resource usage
+- infrastructure as code
+  - entire architecture described in a text file
+  - Designer - usually design your architecture - saves to a text file
+- automates provisioning of architecture
+
+
+
+AWS CloudFront  {Content Delivery Service}
+==============
+- delivers content to customers
+- global content delivery
+- works w/WAF & Shield - protects DDoS
+
+
+Edge Locations  {CDN}
+--------------
+- used w/CloudFront
+- "instances" that contain user data close to end users
+
+
+Route 53
+--------
+- DNS Web Service
+- route end users to Internet applications by using a human readable URL
+
+
+AWS Config   {Compliance}
+----------
+- monitors configuration and changes between cfgs
+- simplify security configuration, management, troubleshooting
+- fully managed
+- inventory
+- history
+- change notifications
+- discover existing resources
+- assess overall compliance & risk status
+- SNS - get notified via AWS Simple Notification Service of changes
+
+
+Artifact
+--------
+- central resource for compliance documentation
+- certifications, regulations, attestations, etc
+
+
+
+Cost Optimization
+-----------------
+- on-demand
+  - spiky demands
+- reserved
+  - for a known committed time period
+- spot
+  - time insensitive, goes away at any time
+  - spare
+- dedicated
+  - highly sensitive
+  - most expensive
+  - dedicated resources
+  - cause your own licenses
+
+
+Support Plans
+-------------
+- Basic
+  - long response times
+  - not much support
+- Developer
+- Business
+  -most popular
+  - 24x7 access
+- Enterprise
+  - dedicated TAM - Tech Account Manager
+
+
+
+
+AWS Organizations
+================
+- centrally govern your environment
+- policy based management for multiple AWS accounts
+- control AWS service use across accounts
+- automate account creation
+- consolidate billing & Usage reporting
+- manage cross-account access
+
+
+Service Control Policy - SCP
+----------------------------
+- control which AWS service actions are accessible to account principals - including root
+
+
+- AWS Certified Cloud Practitioner Certification Exam Guide
+- go thru AWS White papers  {"dense"}
+- WhizLabs - free practice tests
 
 
